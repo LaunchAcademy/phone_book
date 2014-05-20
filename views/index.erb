@@ -1,0 +1,11 @@
+<h1>Contacts</h1>
+
+<ul>
+  <% @contacts.each do |contact| %>
+    <li>
+      <a href="<%= url("/contacts/#{contact[:email]}") %>">
+        <%= "#{contact[:first_name]} #{contact[:last_name]}" %>
+      </a>
+    </li>
+  <% end %>
+</ul>
